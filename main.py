@@ -7,7 +7,7 @@
 #
 # Authors: Martin Monperrus, Paul Lardet
 # Original URL: https://gist.github.com/monperrus/c671817d53f6fc4bfe8d1773f28262d7
-# New repository: 
+# New repository: https://github.com/godisopensource/np2bw/
 # License: Public domain
 
 import csv
