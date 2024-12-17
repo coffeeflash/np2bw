@@ -1,4 +1,4 @@
-# NP2W: Nextcloud Passwords to Bitwarden Vault
+# NP2BW: Nextcloud Passwords to Bitwarden Vault
 
 Easily convert a Nextcloud Passwords (NP) database to a Bitwarden Vault (BW). 
 This script is based on [@monperrus](https://www.github.com/monperrus) work I found [here](https://gist.github.com/monperrus/c671817d53f6fc4bfe8d1773f28262d7).
