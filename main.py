@@ -22,8 +22,8 @@ def csv_to_json(csv_file_path, json_file_path):
     with open(json_file_path, 'w', encoding='utf-8') as jsonfile:
         json.dump(data, jsonfile, indent=4, ensure_ascii=False)
 
-csv_file_path = "/Users/paul/Downloads/np.csv" # Put CSV database from Nextcloud Passwords
-json_file_path = "/Users/paul/Downloads/nextcloudpasswords.json" # Json converted file will be here
+csv_file_path = "Passwords_2025-05-14.csv" # Put CSV database from Nextcloud Passwords
+json_file_path = "nextcloudpasswords.json" # Json converted file will be here
 csv_to_json(csv_file_path, json_file_path)
 
 with open(json_file_path, "r", encoding='utf-8') as file:
@@ -39,17 +39,17 @@ def entry_to_bw_json(entry):
         "deletedDate": None,
         "id": entry.get("Id", ""),
         "organizationId": None,
-        "folderId": entry.get("ID du dossier", None),
+        "folderId": entry.get("Folder", None),
         "type": 1,
         "reprompt": 0,
-        "name": entry.get("Libéllé", ""),
+        "name": entry.get("Label", ""),
         "notes": entry.get("Notes") or None,
-        "favorite": entry.get("Favori", "").lower() == "vrai",
+        "favorite": entry.get("Favorite", "").lower() == "true",
         "login": {
             "fido2Credentials": [],
-            "uris": [{"match": None, "uri": entry.get("Lien", "")}] if entry.get("Lien") else [],
-            "username": entry.get("Nom d’utilisateur", ""),
-            "password": entry.get("Mot de passe", ""),
+            "uris": [{"match": None, "uri": entry.get("Url", "")}] if entry.get("Url") else [],
+            "username": entry.get("Username", ""),
+            "password": entry.get("Password", ""),
             "totp": None
         },
         "collectionIds": None
